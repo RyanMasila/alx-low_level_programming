@@ -1,31 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-/**
- * _isnumber - checks if string is a number
- * @s: string
- * Return: 1
- */
-int _isnumber(char *s)
-{
-	int x, c, d;
-
-	x = 0, d = 0, c = 1;
-	if (*s == '-')
-	{
-		x++;
-	}
-	for (; *(s + 1) != 0; x++)
-	{
-		d = isdigit(*(s + 1));
-		if (d == 0)
-		{
-			c = 0;
-			break;
-		}
-	}
-	return (c);
-}
+#include <string.h>
 /**
  * main - Entry point
  * @argc: number of arguments
@@ -34,29 +9,32 @@ int _isnumber(char *s)
  */
 int main(int argc, char *argv[])
 {
-	int i, n = 0, ex = 0;
+	int i;
+	unsigned int k, sum = 0;
+	char *e;
 
 	if (argc > 1)
 	{
-		for (i = 0; i < argc; i++)
+		for (i = 1; i < argc; i++)
 		{
-			if (_isnumber(argv[1]))
+			e = argv[i];
+
+			for (k = 0; k < strlen(e); k++)
 			{
-				n += atoi(argv[i]);
+				if (e[k] < 48 || e[k] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
-			else
-			{
-				ex = 1;
-			}
+			sum = sum + atoi(e);
+			e++;
 		}
-	}
-	if (ex == 0)
-	{
-		printf("%i\n", n);
+		printf("%d\n", sum);
 	}
 	else
 	{
-		printf("%s\n", "Error");
+		printf("0\n");
 	}
-	return (ex);
+	return (0);
 }
