@@ -8,9 +8,14 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, sum = 1;
+	int i, sum = 1, ex = 0;
 
-	if (argc > 1)
+	if (argc == 1)
+	{
+		printf("%s\n", "Error");
+		ex = 1;
+	}
+	else
 	{
 		for (i = 1; i < argc; i++)
 		{
@@ -18,5 +23,5 @@ int main(int argc, char *argv[])
 		}
 		printf("%d\n", sum);
 	}
-	return (0);
+	return (ex);
 }
