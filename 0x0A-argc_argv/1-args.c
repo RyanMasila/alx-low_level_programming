@@ -7,6 +7,18 @@
  */
 int main(int argc, char __attribute__ ((unused))*argv[])
 {
-	printf("%d\n", argc);
+	int i, s = 0;
+
+	if (argc == 1)
+	{
+		printf("%d\n", s);
+	}
+	else
+	{
+		for (i = 1; i < argc; i++)
+		{
+			printf("%d\n", i);
+		}
+	}
 	return (0);
 }
