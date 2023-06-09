@@ -39,9 +39,9 @@ int main(int argc, char *argv[])
 			ce -= 2;
 			continue;
 		}
-		if ((ce - 2) >= 0)
+		if ((ce - 1) >= 0)
 		{
-			ce -= 2;
+			ce -= 1;
 			continue;
 		}
 		ce--;
