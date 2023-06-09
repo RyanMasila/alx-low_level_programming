@@ -39,6 +39,11 @@ int main(int argc, char *argv[])
 			ce -= 2;
 			continue;
 		}
+		if ((ce - 2) >= 0)
+		{
+			ce -= 2;
+			continue;
+		}
 		ce--;
 	}
 	printf("%d\n", c);
