@@ -9,7 +9,7 @@ int main(int argc, char __attribute__ ((unused))*argv[])
 {
 	int i, s = 0;
 
-	if (argc == 1)
+	if (argc <= 1)
 	{
 		printf("%d\n", s);
 	}
