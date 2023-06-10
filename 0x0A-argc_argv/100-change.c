@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
 		}
 		if ((ce - 5) >= 0)
 		{
-			c -= 5;
+			ce -= 5;
 			continue;
 		}
 		if ((ce - 2) >= 0)
