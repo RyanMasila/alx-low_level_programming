@@ -15,7 +15,9 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
+
 	ce = atoi(argv[1]);
+
 	while (ce > 0)
 	{
 		c++;
@@ -39,13 +41,10 @@ int main(int argc, char *argv[])
 			ce -= 2;
 			continue;
 		}
-		if ((ce - 1) >= 0)
-		{
-			ce -= 1;
-			continue;
-		}
 		ce--;
 	}
+
 	printf("%d\n", c);
+
 	return (0);
 }
