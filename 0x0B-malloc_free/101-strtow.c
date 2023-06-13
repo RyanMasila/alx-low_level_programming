@@ -11,14 +11,14 @@ char **strtow(char *str);
  */
 char word_len(char *st)
 {
-        int i = 0, l = 0;
+	int i = 0, l = 0;
 
-        while (*(st + i) && *(st + i) != ' ')
-        {
-                l++;
-                i++;
-        }
-        return (l);
+	while (*(st + i) && *(st + i) != ' ')
+	{
+		l++;
+		i++;
+	}
+	return (l);
 }
 
 
@@ -60,16 +60,12 @@ char **strtow(char *str)
 	{
 		return (NULL);
 	}
-
 	wo = _wcount(str);
-
 	if (wo == 0)
 	{
 		return (NULL);
 	}
-
 	s = malloc((wo + 1) * (sizeof(char *)));
-
 	if (s == NULL)
 	{
 		return (NULL);
@@ -82,9 +78,7 @@ char **strtow(char *str)
 		}
 
 		le = word_len(str + i);
-
 		s[w] = malloc((le + 1) * (sizeof(char)));
-
 		if (s[w] == NULL)
 		{
 			for (; w >= 0; w--)
@@ -92,7 +86,6 @@ char **strtow(char *str)
 				free(s[w]);
 			}
 			free(s);
-
 			return (NULL);
 		}
 		for (l = 0; l < le; l++)
@@ -102,6 +95,5 @@ char **strtow(char *str)
 		s[w][l] = '\0';
 	}
 	s[w] = NULL;
-
 	return (s);
 }
