@@ -7,18 +7,18 @@
  */
 void print_binary(unsigned long int n)
 {
-	unsigned long int size;
+	signed long int size;
 	char c;
 	int flag;
 
-	size = sizeof(n) * 8;
+	size = sizeof(n) * 8 - 1;
 	if (n == 1)
 	{
 		printf("0");
 	}
 	if (n == 0)
 	{
-		ptintf("1");
+		printf("1");
 	}
 	flag = 0;
 	while (size >= 0)
