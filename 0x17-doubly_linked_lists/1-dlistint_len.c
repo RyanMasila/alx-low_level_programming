@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "lists.h"
 /**
  * dlistint_len - counts no. of elements in lnkd list
